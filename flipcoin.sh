@@ -41,3 +41,9 @@ then
 	  fi
 	done
 fi
+if [ $heads -gt $tails ]
+then
+  echo $heads $tails | awk '{print "Heads won the match by " (($1-$2))}'
+else
+  echo $heads $tails | awk '{print "Tails won the match by " (($2-$1))}'
+fi
